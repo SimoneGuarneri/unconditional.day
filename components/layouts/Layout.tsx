@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import { Header } from "./Header";
 import SearchForm from "../SearchForm";
 import { useRouter } from "next/router";
+import { GeistSans } from "geist/font/sans";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -51,9 +52,13 @@ const Layout: FunctionComponent<LayoutProps> = ({
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <div className="flex flex-col h-screen ">
-        <Header hideTagline={hideTagLine || isMobile} />
-        {!hideSearchBar && <SearchForm onSubmitted={onSubmitted} />}
+      <div
+        className={`flex flex-col h-screen bg-baseWhite ${GeistSans.className}`}
+      >
+        <div className="flex flex-row items-center bg-blue-200">
+          <Header hideTagline={hideTagLine || isMobile} />
+          {!hideSearchBar && <SearchForm onSubmitted={onSubmitted} />}
+        </div>
         <hr />
         <main className="m-auto overflow-y-scroll md:overflow-y-visible">
           {children}

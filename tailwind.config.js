@@ -13,6 +13,17 @@ module.exports = {
       autoprefixer: {},
     },
   ],
-  theme: {},
-  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        baseWhite: "#F3F3F3",
+        baseDark: "#41364A",
+        accentPurple: "#9A63D1",
+      },
+      fontFamily: {
+        mainFont: "var(--font-geist-sans)",
+      },
+    },
+    darkMode: "class",
+  },
 };
