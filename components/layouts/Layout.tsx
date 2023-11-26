@@ -53,13 +53,18 @@ const Layout: FunctionComponent<LayoutProps> = ({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div
-        className={`flex flex-col h-screen bg-baseWhite ${GeistSans.className}`}
+        className={`flex flex-col h-screen bg-baseWhite dark:bg-baseDark ${GeistSans.className}`}
       >
-        <div className="flex flex-row items-center bg-blue-200">
-          <Header hideTagline={hideTagLine || isMobile} />
-          {!hideSearchBar && <SearchForm onSubmitted={onSubmitted} />}
+        <div className="flex flex-col md:flex-row lg:flex-row mobile items-center py-5 px-10">
+          <div className="flex flex-grow ">
+            <Header hideTagline={hideTagLine || isMobile} />
+          </div>
+          <div className="flex items-end h-full md:py-6">
+            {!hideSearchBar && <SearchForm onSubmitted={onSubmitted} />}
+          </div>
         </div>
-        <hr />
+        <div className="rounded-md h-0.5 w-4/5 mx-auto bg-baseDark dark:bg-baseWhite"></div>
+
         <main className="m-auto overflow-y-scroll md:overflow-y-visible">
           {children}
         </main>

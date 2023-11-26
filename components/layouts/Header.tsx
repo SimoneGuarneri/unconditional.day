@@ -6,14 +6,14 @@ interface HeaderProps {
 }
 export const Header: FunctionComponent<HeaderProps> = ({ hideTagline }) => {
   return (
-    <header className="header text-center flex flex-col p-0 md:p-10">
+    <header className="header flex flex-col md:py-5 align-bottom">
       {!hideTagline && (
         <h2 className="pl-1 subtitle text-left text-md md:text-xl text-baseDark dark:text-baseWhite">
           Just
         </h2>
       )}
       <Link href="/">
-        <h1 className="title p-10 md:p-0 text-3xl md:text-8xl font-bold text-baseDark text-baseWhite tracking-tighter">
+        <h1 className="title p-10 md:p-0 text-7xl md:text-8xl font-bold text-baseDark dark:text-baseWhite tracking-tighter">
           Unconditional
           <Link href="/about">
             <span className="ml-2 title text-8xl text-accentPurple">.</span>

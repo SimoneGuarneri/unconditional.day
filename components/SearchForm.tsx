@@ -13,7 +13,7 @@ const SearchForm: FunctionComponent<SearchFormProps> = ({ onSubmitted }) => {
 
   return (
     <form
-      className="w-50 md:w-80 text-sm mx-auto md:p-0 mb-10"
+      className="flex w-[250px] md:w-80 text-sm mx-auto md:p-0 bg-baseDark dark:bg-baseWhite rounded-lg h-min"
       onSubmit={handleQuerySubmitRequest}
     >
       <label
@@ -22,8 +22,8 @@ const SearchForm: FunctionComponent<SearchFormProps> = ({ onSubmitted }) => {
       >
         Search
       </label>
-      <div className="relative">
-        <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+      {/* <div> */}
+      {/* <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
           <svg
             aria-hidden="true"
             className="w-5 h-5 text-gray-500 dark:text-gray-400"
@@ -39,25 +39,25 @@ const SearchForm: FunctionComponent<SearchFormProps> = ({ onSubmitted }) => {
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             ></path>
           </svg>
-        </div>
-        <div className="flex justify-center items-center text-gray-900 bg-gray-50 rounded-lg border border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white ">
-          <input
-            type="search"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            id="default-search"
-            className="outline outline-0 md:p-4 md:pl-10 pl-10 text-start bg-gray-50 w-full h-14 md:h-auto text-md md:text-sm"
-            placeholder="Start search..."
-            required
-          ></input>
-          <button
-            type="submit"
-            className="text-white mr-2 md:h-auto w-2/4 md:w-1/2 bg-black hover:bg-black focus:outline-none font-medium rounded-lg text-sm md:text-sm p-2 md:px-4 md:py-2 dark:bg-black dark:hover:bg-black dark:focus:ring-black"
-          >
-            Search
-          </button>
-        </div>
+        </div> */}
+      <div className="flex text-baseWhite bg-trasparent rounded-lg dark:text-baseDark ">
+        <input
+          type="search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          id="default-search"
+          className="outline rounded-lg outline-0 border-0 p-4 text-start bg-baseDark dark:bg-baseWhite w-full h-12 md:h-12 text-md md:text-lg text-baseWhite dark:text-baseDark"
+          placeholder="Search"
+          required
+        ></input>
+        <button
+          type="submit"
+          className="text-white m-2 md:h-auto bg-accentPurple hover:bg-black focus:outline-none font-semibold rounded-lg text-sm md:text-sm p-2 md:px-4 md:py-2"
+        >
+          Search
+        </button>
       </div>
+      {/* </div> */}
     </form>
   );
 };
