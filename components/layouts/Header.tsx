@@ -6,7 +6,7 @@ interface HeaderProps {
 }
 export const Header: FunctionComponent<HeaderProps> = ({ hideTagline }) => {
   return (
-    <header className="header flex flex-col md:py-5 align-bottom">
+    <header className="header flex flex-col md:py-5 align-bottom ml-5">
       {!hideTagline && (
         <h2 className="pl-1 subtitle text-left text-md md:text-xl text-baseDark dark:text-baseWhite">
           Just

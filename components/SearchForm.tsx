@@ -13,7 +13,7 @@ const SearchForm: FunctionComponent<SearchFormProps> = ({ onSubmitted }) => {
 
   return (
     <form
-      className="flex w-[250px] md:w-80 text-sm mx-auto md:p-0 bg-baseDark dark:bg-baseWhite rounded-lg h-min"
+      className="flex w-[250px] md:w-80 text-sm mx-auto md:p-0 bg-baseDark dark:bg-baseWhite rounded-lg h-min mr-5 border-none outline-none"
       onSubmit={handleQuerySubmitRequest}
     >
       <label
