@@ -5,6 +5,7 @@ import { Header } from "./Header";
 import SearchForm from "../SearchForm";
 import { useRouter } from "next/router";
 import { GeistSans } from "geist/font/sans";
+import { Card } from "../Card";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -53,7 +54,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div
-        className={`flex flex-col h-screen bg-baseWhite dark:bg-baseDark ${GeistSans.className}`}
+        className={`flex flex-col h-full min-h-screen bg-baseWhite dark:bg-baseDark ${GeistSans.className}`}
       >
         <div className="flex flex-col md:flex-row lg:flex-row mobile items-center py-5 px-10">
           <div className="flex flex-grow ">
@@ -66,6 +67,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
         <div className="rounded-md h-0.5 w-4/5 mx-auto bg-baseDark dark:bg-baseWhite"></div>
 
         <main className="m-auto overflow-y-scroll md:overflow-y-visible">
+          <Card />
           {children}
         </main>
         <Footer />
